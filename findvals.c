@@ -102,7 +102,7 @@ int findMatches(int rct, int cct, int max, int min, int verbose, float **rows){
   int sh_count = 0;
   int r,c;
 
-  #pragma omp parallel private(r,c) shared(sh_count)
+  #pragma omp parallel private(r,c) shared(sh_count) num_threads(8)
   {
     #pragma omp for
     for (r = 0; r < rct; r++){
