@@ -1,7 +1,7 @@
 NAME=findvals
 LIBS=
 SOURCES=\
-	findvals.c utils.c
+	findvals.c
 
 
 CC=gcc

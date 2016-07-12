@@ -52,12 +52,14 @@ int main(int argc, char **argv){
 
   float** rows = createArray(rct, cct);
 
-
-  double t1 = getTime();
+  struct timeval myTime;
+  gettimeofday(&myTime, NULL);
+  double t1 = myTime.tv_sec+(myTime.tv_usec/1000000.0);
 
   count = findMatches(rct, cct, max, min, verbose, rows);
 
-  double t2 = getTime();
+  gettimeofday(&myTime, NULL);
+  double t2 = myTime.tv_sec+(myTime.tv_usec/1000000.0);
   printf("%.6lf seconds elapsed\n", t2-t1);
 
   fprintf(stdout, "Found %d approximate matches.\n", count);
