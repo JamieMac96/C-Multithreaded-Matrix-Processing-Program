@@ -12,8 +12,8 @@ int main(int argc, char **argv){
   char *refStop, *tolStop;
   int verbose = 0;
   int i;
-  int rct, cct;
   int count;
+  int rct, cct;
   int max, min;
   float ref, tol;
 
